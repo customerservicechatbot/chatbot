@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Travel Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+        }
+        
+        .bg {
+          /* The image used */
+          background-image: url("https://miro.medium.com/max/4000/1*KnDlvRBZuEqKQUqlrg-nTQ@2x.png");
+        
+          /* Full height */
+          height: 100%; 
+        
+          /* Center and scale the image nicely */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        </style>
+</head>
+<body class="bg">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Travel Booking Assistant</h1>
+            <div class="controls">
+                <button id="languageToggle" class="btn">
+                    <span class="icon">🌐</span>
+                    <span id="currentLang">EN</span>
+                </button>
+                <button id="speakButton" class="btn">
+                    <span class="icon">🔊</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <!-- Messages will be dynamically added here -->
+        </div>
+
+        <div class="service-selector" id="serviceSelector">
+            <button class="service-btn" data-service="flight">
+                <span class="icon">✈</span> Flight
+            </button>
+            <button class="service-btn" data-service="hotel">
+                <span class="icon">🏨</span> Hotel
+            </button>
+            <button class="service-btn" data-service="car">
+                <span class="icon">🚗</span> Car
+            </button>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button id="sendButton" class="btn">Send</button>
+            <button id="micButton" class="btn">
+                <span class="icon">🎤</span>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
